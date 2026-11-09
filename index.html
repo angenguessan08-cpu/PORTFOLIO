@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Portfolio premium d'Ange Alida N’GUESSAN, Data Analyst en Côte d’Ivoire. SQL, Python, Power BI, dashboards et analyse business.">
+    content="Portfolio d'Ange Alida N’GUESSAN, Data Analyst en Côte d’Ivoire. SQL, Python, R, Power BI, Streamlit, Shiny, Stata, SPSS, dashboards et analyse business.">
   <title>Ange Alida N’GUESSAN | Data Analyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -573,6 +573,135 @@
       padding-left: 3px;
     }
 
+    .badge-new {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      border: 1px solid rgba(108, 224, 159, .35);
+      border-radius: 8px;
+      color: #c8ffdc;
+      background: rgba(108, 224, 159, .1);
+      font-size: .66rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+
+    .chart-box {
+      margin: 0 0 20px;
+      padding: 14px 16px 10px;
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .015));
+    }
+
+    .chart-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: .84rem;
+      font-weight: 800;
+    }
+
+    .chart-title small {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .chart-note {
+      margin: 6px 0 0 !important;
+      color: var(--muted) !important;
+      font-size: .7rem;
+    }
+
+    .chart {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .chart text {
+      fill: #aab3c5;
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .chart .val {
+      fill: #f6f3ea;
+      font-weight: 800;
+    }
+
+    .chart .grid {
+      stroke: rgba(255, 255, 255, .08);
+      stroke-width: 1;
+    }
+
+    .chart .gbar {
+      transform-box: fill-box;
+      transform-origin: bottom;
+      animation: growBar 1s cubic-bezier(.2, .8, .2, 1) both;
+    }
+
+    .chart .hbar {
+      transform-origin: left;
+      animation-name: growBarX;
+    }
+
+    .chart .draw {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+    }
+
+    .reveal.is-visible .chart .draw {
+      animation: drawLine 1.8s ease forwards;
+    }
+
+    .chart .ring {
+      transition: stroke-dashoffset 1s ease;
+    }
+
+    .project-block.wide {
+      grid-column: span 2;
+    }
+
+    .project-actions {
+      margin-top: 22px;
+    }
+
+    .project-card .project-columns {
+      margin-top: 0;
+    }
+
+    .project-card>.project-actions {
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    @keyframes growBarX {
+      from {
+        transform: scaleX(.05);
+        opacity: .3;
+      }
+
+      to {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes drawLine {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
     .project-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1020,6 +1149,10 @@
         grid-column: span 1;
       }
 
+      .project-block.wide {
+        grid-column: auto;
+      }
+
       .skills-grid {
         grid-template-columns: 1fr;
       }
@@ -1085,7 +1218,8 @@
             <p class="eyebrow reveal">Data Analyst</p>
             <h2 class="reveal">Augmentez vos performances <span> grâce à vos données</span></h2>
             <p class="hero-copy reveal">
-              Data Analyst spécialisée en SQL, Python, Power BI et Excel, j’aide les entreprises à exploiter leurs
+              Data Analyst spécialisée en SQL, Python, R, Power BI et Excel, avec des dashboards interactifs
+              (Streamlit, Shiny) et une analyse statistique rigoureuse (Stata, SPSS), j’aide les entreprises à exploiter leurs
               données
               pour améliorer leur performance, optimiser leurs décisions et accélérer leur croissance.
             </p>
@@ -1098,6 +1232,10 @@
               <span>Python analytics</span>
               <span>Power BI & DAX</span>
               <span>Excel avancé</span>
+              <span>R & Shiny</span>
+              <span>Streamlit</span>
+              <span>Stata & SPSS</span>
+              <span>Git & GitHub</span>
             </div>
           </div>
 
@@ -1133,9 +1271,14 @@
               et exploitables pour le business.
             </p>
             <p>
-              Grâce à une solide maîtrise de SQL, Python, Power BI et Excel avancé
+              Grâce à une solide maîtrise de SQL, Python, R, Power BI et Excel avancé
               (Power Query, Power Pivot), je suis capable de couvrir toute la chaîne de valeur
               de la donnée : de la préparation à la visualisation, jusqu'à la recommandation stratégique.
+            </p>
+            <p>
+              Mes compétences récentes : applications analytiques interactives (Streamlit, Shiny), statistiques
+              avec R, Stata et SPSS, livrables automatisés (rapports Word, présentations PowerPoint, classeurs Excel)
+              et workflow assisté par IA pour gagner en rapidité et en qualité.
             </p>
           </article>
 
@@ -1211,7 +1354,7 @@
             <h3>Data & Analyse</h3>
             <ul class="skill-list">
               <li>SQL avancé : CTE, Window Functions, modélisation de données</li>
-              <li>Python : Pandas, NumPy, Matplotlib, Seaborn, Plotly</li>
+              <li>Python : Pandas, NumPy, SciPy, Matplotlib, Seaborn, Plotly</li>
               <li>Analyse exploratoire : EDA</li>
               <li>Data Cleaning & Feature Engineering</li>
             </ul>
@@ -1248,6 +1391,56 @@
               <li>Data storytelling</li>
             </ul>
           </article>
+
+          <article class="skill-card reveal" data-code="STAT">
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 19h16" />
+                <path d="M6 19c1-9 3-13 6-13s5 4 6 13" />
+              </svg>
+            </div>
+            <h3>Statistiques & R <span class="badge-new">Nouveau</span></h3>
+            <ul class="skill-list">
+              <li>R & RStudio : tidyverse, ggplot2, nettoyage et analyse</li>
+              <li>Stata et SPSS : tests statistiques, corrélations, régressions</li>
+              <li>Nettoyage de données « sales » : doublons, valeurs aberrantes, dates</li>
+              <li>Interprétation rigoureuse des résultats</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" data-code="APP">
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="14" rx="2" />
+                <path d="M8 21h8" />
+                <path d="M12 18v3" />
+              </svg>
+            </div>
+            <h3>Dashboards web <span class="badge-new">Nouveau</span></h3>
+            <ul class="skill-list">
+              <li>Streamlit : applications analytiques interactives en Python</li>
+              <li>Shiny (R) : dashboards multi-onglets avec filtres globaux</li>
+              <li>Déploiement et charte graphique sur mesure</li>
+              <li>Tableaux de bord pour la direction</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" data-code="IA">
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
+                <path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" />
+                <path d="M19 16v4" />
+                <path d="M17 18h4" />
+              </svg>
+            </div>
+            <h3>IA, automatisation & Git <span class="badge-new">Nouveau</span></h3>
+            <ul class="skill-list">
+              <li>Analyse assistée par IA (Claude) : de la donnée brute aux recommandations</li>
+              <li>Livrables automatisés : rapports Word, PowerPoint, Excel</li>
+              <li>Pipelines reproductibles en Python et SQL</li>
+              <li>Git & GitHub : versionnement et publication de projets</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -1265,9 +1458,7 @@
         </div>
 
         <div class="project-grid">
-
-          <!-- Projet 01 — SaaS (ancien 02) -->
-          <article class="project-card featured reveal">
+<article class="project-card featured reveal">
             <div class="project-visual" aria-hidden="true">
               <div class="chart-scene">
                 <div class="bars">
@@ -1285,199 +1476,30 @@
               </div>
             </div>
             <div>
-              <div class="project-top">
-                <div>
-                  <p class="eyebrow">SQL</p>
-                  <h3>Analyse SaaS — Revenus & Churn</h3>
-                </div>
-                <span class="project-number">01</span>
-              </div>
+              <div class="project-top"><div><p class="eyebrow">SQL</p><h3>Analyse SaaS — Revenus & Churn</h3></div><span class="project-number">01</span></div>
               <p><strong>Contexte :</strong> analyse d'une entreprise SaaS B2B en Afrique de l'Ouest.</p>
-              <div class="tag-list">
-                <span>SQL</span><span>MRR</span><span>Churn</span><span>NRR</span>
-              </div>
+              <div class="tag-list"><span>SQL</span><span>MRR</span><span>Churn</span><span>NRR</span></div>
               <div class="project-columns">
-                <div class="project-block">
-                  <h4>Objectifs</h4>
-                  <ul>
-                    <li>Suivre le MRR</li>
-                    <li>Analyser le churn</li>
-                    <li>Étudier la rétention client</li>
-                    <li>Identifier les segments rentables</li>
-                  </ul>
-                </div>
-                <div class="project-block">
-                  <h4>Travaux réalisés</h4>
-                  <ul>
-                    <li>Analyse du MRR par pays et par mois</li>
-                    <li>Calcul du churn et du NRR</li>
-                    <li>Analyse de cohortes</li>
-                    <li>Segmentation client</li>
-                  </ul>
-                </div>
-                <div class="project-block">
-                  <h4>Insights clés</h4>
-                  <ul>
-                    <li>La croissance du MRR est portée par les upgrades Premium</li>
-                    <li>Le churn est élevé après 3 mois pour les clients Basic</li>
-                    <li>Les cohortes initiales sont les plus performantes</li>
-                    <li>Certains segments dépassent 100% de NRR</li>
-                  </ul>
-                </div>
-                <div class="project-block">
-                  <h4>Impact business</h4>
-                  <ul>
-                    <li>Réduction du churn</li>
-                    <li>Identification d'opportunités d'upsell</li>
-                    <li>Optimisation des revenus</li>
-                    <li>Outils : SQL</li>
-                  </ul>
-                </div>
+                <div class="project-block"><h4>Objectifs</h4><ul><li>Suivre le MRR</li><li>Analyser le churn</li><li>Étudier la rétention client</li><li>Identifier les segments rentables</li></ul></div>
+                <div class="project-block"><h4>Travaux réalisés</h4><ul><li>Analyse du MRR par pays et par mois</li><li>Calcul du churn et du NRR</li><li>Analyse de cohortes</li><li>Segmentation client</li></ul></div>
+                <div class="project-block"><h4>Insights clés</h4><ul><li>La croissance du MRR est portée par les upgrades Premium</li><li>Le churn est élevé après 3 mois pour les clients Basic</li><li>Les cohortes initiales sont les plus performantes</li><li>Certains segments dépassent 100 % de NRR</li></ul></div>
+                <div class="project-block"><h4>Impact business</h4><ul><li>Réduction du churn</li><li>Identification d'opportunités d'upsell</li><li>Optimisation des revenus</li><li>Outils : SQL</li></ul></div>
               </div>
-              <!-- Boutons -->
-              <div class="hero-actions" style="margin-top:24px;">
-
-                <a class="btn btn-primary"
-                  href="https://github.com/angenguessan08-cpu/projet03_SQL_Analyse-SaaS_Revenus-Churn.git"
-                  target="_blank">
-                  Voir le projet sur GitHub
-                </a>
-              </div>
-          </article>
-
-          <!-- Projet 02 — AfriMarket (ancien 04) -->
-          <article class="project-card reveal">
-            <div class="project-top">
-              <div>
-                <p class="eyebrow">Python</p>
-                <h3>Analyse stratégique — AfriMarket</h3>
-              </div>
-              <span class="project-number">02</span>
-            </div>
-            <p><strong>Contexte :</strong> analyse globale d'une plateforme e-commerce pour améliorer la rentabilité et
-              la
-              performance.</p>
-            <div class="tag-list">
-              <span>Python</span><span>KPI</span><span>ROI marketing</span><span>Pareto</span>
-            </div>
-            <div class="project-columns">
-              <div class="project-block">
-                <h4>Travaux réalisés</h4>
-                <ul>
-                  <li>Calcul des KPI : CA, profit, panier moyen</li>
-                  <li>Analyse par catégorie et par ville</li>
-                  <li>Analyse du ROI marketing</li>
-                  <li>Analyse client avec Pareto</li>
-                </ul>
-              </div>
-              <div class="project-block">
-                <h4>Insights clés</h4>
-                <ul>
-                  <li>20% des clients génèrent 80% du chiffre d'affaires</li>
-                  <li>Certaines catégories ont un taux de retour élevé</li>
-                  <li>Forte concentration géographique des ventes</li>
-                  <li>ROI marketing très variable</li>
-                </ul>
-              </div>
-              <div class="project-block">
-                <h4>Impact business</h4>
-                <ul>
-                  <li>Optimisation des investissements marketing</li>
-                  <li>Amélioration de la rentabilité</li>
-                  <li>Mise en place de stratégies de fidélisation</li>
-                  <li>Outils : Python</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Boutons -->
-            <div class="hero-actions" style="margin-top:24px;">
-
-              <a class="btn btn-primary" href="https://github.com/angenguessan08-cpu/PROJET03-Python-Afrimarket.git "
-                target="_blank">
-                Voir le projet sur GitHub
-              </a>
+              <div class="project-actions"><a class="btn btn-primary" href="https://github.com/angenguessan08-cpu/projet03_SQL_Analyse-SaaS_Revenus-Churn.git" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Voir le projet sur GitHub</a></div>
             </div>
           </article>
 
-          <!-- Projet 03 — Immobilier Power BI -->
-          <article class="project-card reveal">
+<article class="project-card reveal"><div class="project-top"><div><p class="eyebrow">Python</p><h3>Analyse stratégique — AfriMarket</h3></div><span class="project-number">02</span></div><figure class="chart-box"><figcaption class="chart-title"><span>Concentration du chiffre d'affaires</span><small>Principe de Pareto</small></figcaption><svg class="chart" viewBox="0 0 520 230" role="img" aria-label="Pareto 80/20" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d99b"/><stop offset="1" stop-color="#49a7ff" stop-opacity=".7"/></linearGradient><linearGradient id="ap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f07ab0" stop-opacity=".35"/><stop offset="1" stop-color="#f07ab0" stop-opacity="0"/></linearGradient><linearGradient id="bp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#49a7ff" stop-opacity=".3"/><stop offset="1" stop-color="#49a7ff" stop-opacity="0"/></linearGradient></defs><circle cx="130" cy="108" r="62" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="22"/><circle class="ring" cx="130" cy="108" r="62" fill="none" stroke="#d7b46a" stroke-width="22" stroke-linecap="round" stroke-dasharray="311.6 389.6" transform="rotate(-90 130 108)"/><text x="130" y="110" text-anchor="middle" class="val" style="font-size:26px">80 %</text><text x="130" y="128" text-anchor="middle">du chiffre d'affaires</text><g transform="translate(250,52)"><rect width="10" height="10" rx="3" fill="#d7b46a"/><text x="18" y="9" class="val">20 % des clients</text><text x="18" y="27">génèrent 80 % du CA (Pareto)</text><rect y="52" width="10" height="10" rx="3" fill="#49a7ff"/><text x="18" y="61" class="val">Ventes concentrées</text><text x="18" y="79">sur quelques villes</text><rect y="104" width="10" height="10" rx="3" fill="#58e0d5"/><text x="18" y="113" class="val">ROI marketing variable</text><text x="18" y="131">selon les canaux</text></g></svg><p class="chart-note">Source : analyse AfriMarket.</p></figure><p><strong>Contexte :</strong> analyse globale d'une plateforme e-commerce pour améliorer la rentabilité et la performance.</p><div class="tag-list"><span>Python</span><span>KPI</span><span>ROI marketing</span><span>Pareto</span></div><div class="project-columns"><div class="project-block"><h4>Travaux réalisés</h4><ul><li>Calcul des KPI : CA, profit, panier moyen</li><li>Analyse par catégorie et par ville</li><li>Analyse du ROI marketing</li><li>Analyse client avec Pareto</li></ul></div><div class="project-block"><h4>Insights clés</h4><ul><li>20 % des clients génèrent 80 % du chiffre d'affaires</li><li>Certaines catégories ont un taux de retour élevé</li><li>Forte concentration géographique des ventes</li><li>ROI marketing très variable</li></ul></div><div class="project-block wide"><h4>Impact business</h4><ul><li>Optimisation des investissements marketing</li><li>Amélioration de la rentabilité</li><li>Stratégies de fidélisation</li><li>Outils : Python</li></ul></div></div><div class="project-actions"><a class="btn btn-primary" href="https://github.com/angenguessan08-cpu/PROJET03-Python-Afrimarket.git" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Voir le projet sur GitHub</a></div></article>
 
-            <div class="project-top">
-              <div>
-                <p class="eyebrow">Power BI</p>
-                <h3>Analyse Immobilière — Dashboard Exécutif</h3>
-              </div>
-              <span class="project-number">03</span>
-            </div>
+<article class="project-card reveal"><div class="project-top"><div><p class="eyebrow">Python · Streamlit <span class="badge-new">Récent</span></p><h3>VoltRide Africa — Stratégie avant 20 stations</h3></div><span class="project-number">03</span></div><figure class="chart-box"><figcaption class="chart-title"><span>Chiffre d'affaires mensuel</span><small>M FCFA · mai – oct. 2026</small></figcaption><svg class="chart" viewBox="0 0 520 230" role="img" aria-label="Chiffre d'affaires mensuel VoltRide" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d99b"/><stop offset="1" stop-color="#49a7ff" stop-opacity=".7"/></linearGradient><linearGradient id="av" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f07ab0" stop-opacity=".35"/><stop offset="1" stop-color="#f07ab0" stop-opacity="0"/></linearGradient><linearGradient id="bv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#49a7ff" stop-opacity=".3"/><stop offset="1" stop-color="#49a7ff" stop-opacity="0"/></linearGradient></defs><line class="grid" x1="44" x2="500" y1="196.0" y2="196.0"/><text x="36" y="200.0" text-anchor="end">0</text><line class="grid" x1="44" x2="500" y1="155.5" y2="155.5"/><text x="36" y="159.5" text-anchor="end">5</text><line class="grid" x1="44" x2="500" y1="115.0" y2="115.0"/><text x="36" y="119.0" text-anchor="end">10</text><line class="grid" x1="44" x2="500" y1="74.5" y2="74.5"/><text x="36" y="78.5" text-anchor="end">15</text><line class="grid" x1="44" x2="500" y1="34.0" y2="34.0"/><text x="36" y="38.0" text-anchor="end">20</text><rect class="gbar" style="animation-delay:0.00s" x="62.2" y="76.4" width="39.5" height="119.6" rx="4" fill="url(#gv)"><title>Mai : 14,76 M FCFA</title></rect><text class="val" x="82.0" y="69.4" text-anchor="middle">14,8</text><text x="82.0" y="214" text-anchor="middle">Mai</text><rect class="gbar" style="animation-delay:0.08s" x="138.2" y="74.9" width="39.5" height="121.1" rx="4" fill="url(#gv)"><title>Juin : 14,95 M FCFA</title></rect><text class="val" x="158.0" y="67.9" text-anchor="middle">14,9</text><text x="158.0" y="214" text-anchor="middle">Juin</text><rect class="gbar" style="animation-delay:0.16s" x="214.2" y="78.5" width="39.5" height="117.5" rx="4" fill="url(#gv)"><title>Juil : 14,51 M FCFA</title></rect><text class="val" x="234.0" y="71.5" text-anchor="middle">14,5</text><text x="234.0" y="214" text-anchor="middle">Juil</text><rect class="gbar" style="animation-delay:0.24s" x="290.2" y="65.4" width="39.5" height="130.6" rx="4" fill="url(#gv)"><title>Août : 16,12 M FCFA</title></rect><text class="val" x="310.0" y="58.4" text-anchor="middle">16,1</text><text x="310.0" y="214" text-anchor="middle">Août</text><rect class="gbar" style="animation-delay:0.32s" x="366.2" y="61.6" width="39.5" height="134.4" rx="4" fill="url(#gv)"><title>Sept : 16,59 M FCFA</title></rect><text class="val" x="386.0" y="54.6" text-anchor="middle">16,6</text><text x="386.0" y="214" text-anchor="middle">Sept</text><rect class="gbar" style="animation-delay:0.40s" x="442.2" y="47.1" width="39.5" height="148.9" rx="4" fill="url(#gv)"><title>Oct : 18,38 M FCFA</title></rect><text class="val" x="462.0" y="40.1" text-anchor="middle">18,4</text><text x="462.0" y="214" text-anchor="middle">Oct</text><path class="draw" pathLength="1" d="M82.0,54.4 L462.0,25.1" fill="none" stroke="#58e0d5" stroke-width="0" /><g transform="translate(60,8)"><rect width="132" height="22" rx="6" fill="rgba(108,224,159,.12)" stroke="rgba(108,224,159,.35)"/><text x="66" y="15" text-anchor="middle" style="fill:#c8ffdc">▲ +24,5 % mai → oct.</text></g><text x="44" y="22" >M FCFA</text></svg><p class="chart-note">Source : analyse VoltRide Africa (données fictives).</p></figure><p><strong>Contexte :</strong> audit et analyse de 6 mois d'activité d'une entreprise de mobilité électrique présente dans 5 villes d'Afrique, avant l'ouverture de 20 nouvelles stations.</p><div class="tag-list"><span>Python</span><span>Streamlit</span><span>Marge</span><span>Recommandations</span></div><div class="project-columns"><div class="project-block"><h4>Travaux réalisés</h4><ul><li>Audit et nettoyage du jeu de données</li><li>CA, marge et profit net réel</li><li>Analyse par ville, canal et remboursements</li><li>Dashboard Streamlit et rapport direction</li></ul></div><div class="project-block"><h4>Insights clés</h4><ul><li>Marge brute de 32,4 % du CA sur 95,3 M FCFA</li><li>Profit net estimé 24,2 M FCFA, réel 15,8 M après remboursements</li><li>L'abonnement mensuel et Abidjan portent la rentabilité</li><li>Un taux d'annulation élevé freine Douala</li></ul></div><div class="project-block wide"><h4>Impact business</h4><ul><li>Plan d'ouverture : 18 stations en vague 1</li><li>Correction des fuites avant l'expansion</li><li>Outils : Python, Streamlit</li></ul></div></div><!-- TODO : remplacer par le lien exact du dépôt GitHub --><div class="project-actions"><a class="btn btn-primary" href="https://github.com/angenguessan08-cpu" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Voir le projet sur GitHub</a></div></article>
 
-            <p>
-              <strong>Contexte :</strong> analyse des performances d’un portefeuille immobilier
-              afin d’optimiser les revenus locatifs, le taux d’occupation et la rentabilité des actifs.
-            </p>
+<article class="project-card reveal"><div class="project-top"><div><p class="eyebrow">Python · Streamlit <span class="badge-new">Récent</span></p><h3>Transition énergétique mondiale — Afrique vs monde</h3></div><span class="project-number">04</span></div><figure class="chart-box"><figcaption class="chart-title"><span>Part des énergies renouvelables dans l'électricité</span><small>2000 – 2024 · projection 2030</small></figcaption><svg class="chart" viewBox="0 0 520 230" role="img" aria-label="Parts de renouvelables, Monde et Afrique" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d99b"/><stop offset="1" stop-color="#49a7ff" stop-opacity=".7"/></linearGradient><linearGradient id="at" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f07ab0" stop-opacity=".35"/><stop offset="1" stop-color="#f07ab0" stop-opacity="0"/></linearGradient><linearGradient id="bt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#49a7ff" stop-opacity=".3"/><stop offset="1" stop-color="#49a7ff" stop-opacity="0"/></linearGradient></defs><line class="grid" x1="44" x2="492" y1="196.0" y2="196.0"/><text x="36" y="200.0" text-anchor="end">10 %</text><line class="grid" x1="44" x2="492" y1="154.5" y2="154.5"/><text x="36" y="158.5" text-anchor="end">20 %</text><line class="grid" x1="44" x2="492" y1="113.0" y2="113.0"/><text x="36" y="117.0" text-anchor="end">30 %</text><line class="grid" x1="44" x2="492" y1="71.5" y2="71.5"/><text x="36" y="75.5" text-anchor="end">40 %</text><line class="grid" x1="44" x2="492" y1="30.0" y2="30.0"/><text x="36" y="34.0" text-anchor="end">50 %</text><text x="44.0" y="214" text-anchor="middle">2000</text><text x="193.33333333333334" y="214" text-anchor="middle">2010</text><text x="342.6666666666667" y="214" text-anchor="middle">2020</text><text x="492.0" y="214" text-anchor="middle">2030</text><path d="M44.0,159.2 L58.9,162.1 L73.9,162.6 L88.8,164.5 L103.7,162.3 L118.7,161.9 L133.6,161.3 L148.5,162.4 L163.5,158.5 L178.4,156.2 L193.3,155.2 L208.3,153.9 L223.2,149.9 L238.1,146.9 L253.1,144.5 L268.0,141.6 L282.9,138.5 L297.9,135.5 L312.8,132.9 L327.7,128.9 L342.7,120.9 L357.6,120.5 L372.5,115.0 L387.5,111.5 L402.4,104.8 L402.4,196 L44.0,196 Z" fill="url(#bt)" opacity=".7"/><path class="draw" pathLength="1" d="M44.0,159.2 L58.9,162.1 L73.9,162.6 L88.8,164.5 L103.7,162.3 L118.7,161.9 L133.6,161.3 L148.5,162.4 L163.5,158.5 L178.4,156.2 L193.3,155.2 L208.3,153.9 L223.2,149.9 L238.1,146.9 L253.1,144.5 L268.0,141.6 L282.9,138.5 L297.9,135.5 L312.8,132.9 L327.7,128.9 L342.7,120.9 L357.6,120.5 L372.5,115.0 L387.5,111.5 L402.4,104.8" fill="none" stroke="#49a7ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path class="draw" pathLength="1" d="M44.0,165.0 L58.9,162.6 L73.9,163.0 L88.8,167.9 L103.7,167.9 L118.7,168.2 L133.6,168.5 L148.5,169.5 L163.5,169.4 L178.4,166.9 L193.3,166.0 L208.3,165.8 L223.2,167.8 L238.1,166.5 L253.1,163.5 L268.0,163.1 L282.9,163.2 L297.9,159.9 L312.8,156.2 L327.7,152.3 L342.7,145.0 L357.6,142.9 L372.5,138.3 L387.5,136.2 L402.4,134.8" fill="none" stroke="#d7b46a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M402.4,104.78299999999999 L492.0,82.29" stroke="#49a7ff" stroke-width="2" stroke-dasharray="4 4" fill="none"/><circle cx="492.0" cy="50.75" r="5" fill="none" stroke="#6ce09f" stroke-width="2"/><text x="484.0" y="41.75" text-anchor="end" style="fill:#c8ffdc">Objectif 45 %</text><circle cx="492.0" cy="82.29" r="3.5" fill="#49a7ff"/><text x="499.0" y="86.29" style="fill:#9fd0ff">37,4</text><circle cx="402.4" cy="104.78299999999999" r="4" fill="#49a7ff"/><circle cx="402.4" cy="134.829" r="4" fill="#d7b46a"/><text x="394.4" y="95.78299999999999" text-anchor="end" class="val">Monde 32,0 %</text><text x="394.4" y="152.829" text-anchor="end" class="val" style="fill:#f0d99b">Afrique 24,7 %</text><line x1="411.4" x2="411.4" y1="104.78299999999999" y2="134.829" stroke="#f07ab0" stroke-width="1.5"/><text x="416.4" y="123.806" style="fill:#ffb3d1" class="val">−7,2 pts</text></svg><p class="chart-note">Source : analyse Transition énergétique (212 pays et territoires).</p></figure><p><strong>Contexte :</strong> analyse de la transition électrique de 212 pays et territoires (2000-2024), avec un focus sur l'Afrique de l'Ouest et la Côte d'Ivoire.</p><div class="tag-list"><span>Python</span><span>Modèle en étoile</span><span>Streamlit</span><span>Corrélations</span></div><div class="project-columns"><div class="project-block"><h4>Travaux réalisés</h4><ul><li>Base de données en modèle en étoile</li><li>Script d'analyse reproductible et 8 graphiques</li><li>Dashboard Streamlit interactif</li><li>Rapport exécutif et présentation</li></ul></div><div class="project-block"><h4>Insights clés</h4><ul><li>Renouvelables : 32,0 % dans le monde contre 24,7 % en Afrique</li><li>Côte d'Ivoire : 71 % du mix électrique issu du gaz</li><li>La richesse n'explique pas la part des renouvelables</li><li>Au rythme actuel, 37,4 % en 2030 pour 45 % visés</li></ul></div><div class="project-block wide"><h4>Impact business</h4><ul><li>Diversification du mix hors du gaz</li><li>Priorisation des pays en retard d'accès</li><li>Outils : Python, Streamlit</li></ul></div></div><!-- TODO : remplacer par le lien exact du dépôt GitHub --><div class="project-actions"><a class="btn btn-primary" href="https://github.com/angenguessan08-cpu" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Voir le projet sur GitHub</a></div></article>
 
-            <div class="tag-list">
-              <span>Power BI</span>
-              <span>DAX</span>
-              <span>Immobilier</span>
-              <span>KPI</span>
-            </div>
+<article class="project-card reveal"><div class="project-top"><div><p class="eyebrow">R · Shiny <span class="badge-new">Récent</span></p><h3>Eburnie Onco Santé — Cancers du sein et de la prostate</h3></div><span class="project-number">05</span></div><figure class="chart-box"><figcaption class="chart-title"><span>Actes hebdomadaires par type de cancer</span><small>Actes / semaine · sept. – nov. 2026</small></figcaption><svg class="chart" viewBox="0 0 520 230" role="img" aria-label="Actes hebdomadaires sein et prostate" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="go" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d99b"/><stop offset="1" stop-color="#49a7ff" stop-opacity=".7"/></linearGradient><linearGradient id="ao" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f07ab0" stop-opacity=".35"/><stop offset="1" stop-color="#f07ab0" stop-opacity="0"/></linearGradient><linearGradient id="bo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#49a7ff" stop-opacity=".3"/><stop offset="1" stop-color="#49a7ff" stop-opacity="0"/></linearGradient></defs><line class="grid" x1="44" x2="500" y1="196.0" y2="196.0"/><text x="36" y="200.0" text-anchor="end">0</text><line class="grid" x1="44" x2="500" y1="155.5" y2="155.5"/><text x="36" y="159.5" text-anchor="end">200</text><line class="grid" x1="44" x2="500" y1="115.0" y2="115.0"/><text x="36" y="119.0" text-anchor="end">400</text><line class="grid" x1="44" x2="500" y1="74.5" y2="74.5"/><text x="36" y="78.5" text-anchor="end">600</text><line class="grid" x1="44" x2="500" y1="34.0" y2="34.0"/><text x="36" y="38.0" text-anchor="end">800</text><rect x="240.66666666666666" y="28" width="214.66666666666666" height="168" rx="6" fill="rgba(240,122,176,.09)"/><text x="348.0" y="40" text-anchor="middle" style="fill:#ffb3d1">Octobre Rose</text><rect x="494.0" y="28" width="12.0" height="168" rx="6" fill="rgba(73,167,255,.1)"/><text x="44.0" y="214" text-anchor="middle">31/8</text><text x="145.33333333333331" y="214" text-anchor="middle">14/9</text><text x="246.66666666666666" y="214" text-anchor="middle">28/9</text><text x="348.0" y="214" text-anchor="middle">12/10</text><text x="449.3333333333333" y="214" text-anchor="middle">26/10</text><path d="M44.0,153.0 L94.7,148.8 L145.3,150.8 L196.0,147.0 L246.7,113.2 L297.3,86.9 L348.0,84.8 L398.7,81.4 L449.3,94.5 L500.0,146.4 L500.0,196 L44.0,196 Z" fill="url(#ao)"/><path class="draw" pathLength="1" d="M44.0,153.0 L94.7,148.8 L145.3,150.8 L196.0,147.0 L246.7,113.2 L297.3,86.9 L348.0,84.8 L398.7,81.4 L449.3,94.5 L500.0,146.4" fill="none" stroke="#f07ab0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="44.0" cy="153.0" r="3" fill="#f07ab0"><title>Sein · sem. du 2026-08-31 : 212 actes</title></circle><circle cx="94.7" cy="148.8" r="3" fill="#f07ab0"><title>Sein · sem. du 2026-09-07 : 233 actes</title></circle><circle cx="145.3" cy="150.8" r="3" fill="#f07ab0"><title>Sein · sem. du 2026-09-14 : 223 actes</title></circle><circle cx="196.0" cy="147.0" r="3" fill="#f07ab0"><title>Sein · sem. du 2026-09-21 : 242 actes</title></circle><circle cx="246.7" cy="113.2" r="3" fill="#f07ab0"><title>Sein · sem. du 2026-09-28 : 409 actes</title></circle><circle cx="297.3" cy="86.9" r="3" fill="#f07ab0"><title>Sein · sem. du 2026-10-05 : 539 actes</title></circle><circle cx="348.0" cy="84.8" r="3" fill="#f07ab0"><title>Sein · sem. du 2026-10-12 : 549 actes</title></circle><circle cx="398.7" cy="81.4" r="3" fill="#f07ab0"><title>Sein · sem. du 2026-10-19 : 566 actes</title></circle><circle cx="449.3" cy="94.5" r="3" fill="#f07ab0"><title>Sein · sem. du 2026-10-26 : 501 actes</title></circle><circle cx="500.0" cy="146.4" r="3" fill="#f07ab0"><title>Sein · sem. du 2026-11-02 : 245 actes</title></circle><path d="M44.0,154.9 L94.7,157.9 L145.3,158.5 L196.0,158.1 L246.7,153.9 L297.3,154.3 L348.0,145.8 L398.7,150.0 L449.3,141.3 L500.0,46.5 L500.0,196 L44.0,196 Z" fill="url(#bo)"/><path class="draw" pathLength="1" d="M44.0,154.9 L94.7,157.9 L145.3,158.5 L196.0,158.1 L246.7,153.9 L297.3,154.3 L348.0,145.8 L398.7,150.0 L449.3,141.3 L500.0,46.5" fill="none" stroke="#49a7ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="44.0" cy="154.9" r="3" fill="#49a7ff"><title>Prostate · sem. du 2026-08-31 : 203 actes</title></circle><circle cx="94.7" cy="157.9" r="3" fill="#49a7ff"><title>Prostate · sem. du 2026-09-07 : 188 actes</title></circle><circle cx="145.3" cy="158.5" r="3" fill="#49a7ff"><title>Prostate · sem. du 2026-09-14 : 185 actes</title></circle><circle cx="196.0" cy="158.1" r="3" fill="#49a7ff"><title>Prostate · sem. du 2026-09-21 : 187 actes</title></circle><circle cx="246.7" cy="153.9" r="3" fill="#49a7ff"><title>Prostate · sem. du 2026-09-28 : 208 actes</title></circle><circle cx="297.3" cy="154.3" r="3" fill="#49a7ff"><title>Prostate · sem. du 2026-10-05 : 206 actes</title></circle><circle cx="348.0" cy="145.8" r="3" fill="#49a7ff"><title>Prostate · sem. du 2026-10-12 : 248 actes</title></circle><circle cx="398.7" cy="150.0" r="3" fill="#49a7ff"><title>Prostate · sem. du 2026-10-19 : 227 actes</title></circle><circle cx="449.3" cy="141.3" r="3" fill="#49a7ff"><title>Prostate · sem. du 2026-10-26 : 270 actes</title></circle><circle cx="500.0" cy="46.5" r="3" fill="#49a7ff"><title>Prostate · sem. du 2026-11-02 : 738 actes</title></circle><text x="492.0" y="49.453750000000014" text-anchor="end" class="val">738</text><circle cx="48" cy="14" r="4" fill="#f07ab0"/><text x="58" y="18">Sein</text><circle cx="106" cy="14" r="4" fill="#49a7ff"/><text x="116" y="18">Prostate</text></svg><p class="chart-note">Source : 6 390 actes nettoyés (données fictives).</p></figure><p><strong>Contexte :</strong> analyse de 6 390 actes de dépistage, diagnostic et traitement (Octobre Rose et Novembre Bleu) dans 64 établissements partenaires et 10 villes de Côte d'Ivoire.</p><div class="tag-list"><span>R</span><span>Shiny</span><span>ggplot2</span><span>Statistiques</span></div><div class="project-columns"><div class="project-block"><h4>Travaux réalisés</h4><ul><li>Nettoyage : doublons, fautes de frappe, dates, valeurs aberrantes</li><li>Analyse du parcours de soins et de l'accessibilité</li><li>Tests statistiques et visualisations ggplot2</li><li>Dashboard Shiny à 7 onglets avec filtres globaux</li></ul></div><div class="project-block"><h4>Insights clés</h4><ul><li>Octobre Rose : +134 % d'actes hebdomadaires pour le sein</li><li>Novembre Bleu : forte accélération du dépistage de la prostate</li><li>Effet de campagne mesuré avec intervalles de confiance à 95 %</li></ul></div><div class="project-block wide"><h4>Impact business</h4><ul><li>Suivi du dépistage pendant les campagnes</li><li>Lecture claire du parcours de soins pour la direction</li><li>Outils : R, Shiny, ggplot2</li></ul></div></div><!-- TODO : remplacer par le lien exact du dépôt GitHub --><div class="project-actions"><a class="btn btn-primary" href="https://github.com/angenguessan08-cpu" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Voir le projet sur GitHub</a></div></article>
 
-            <div class="project-columns">
+<article class="project-card reveal"><div class="project-top"><div><p class="eyebrow">SQL <span class="badge-new">Récent</span></p><h3>RH Analytics — Effectifs, turnover et performance</h3></div><span class="project-number">06</span></div><figure class="chart-box"><figcaption class="chart-title"><span>Taux de turnover par département</span><small>% de départs cumulés · 1 500 employés</small></figcaption><svg class="chart" viewBox="0 0 520 250" role="img" aria-label="Taux de turnover par département" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d7b46a"/><stop offset="1" stop-color="#f0d99b"/></linearGradient><linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d99b"/><stop offset="1" stop-color="#49a7ff" stop-opacity=".7"/></linearGradient><linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f07ab0" stop-opacity=".35"/><stop offset="1" stop-color="#f07ab0" stop-opacity="0"/></linearGradient><linearGradient id="br" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#49a7ff" stop-opacity=".3"/><stop offset="1" stop-color="#49a7ff" stop-opacity="0"/></linearGradient></defs><line class="grid" x1="132.0" x2="132.0" y1="18" y2="214"/><text x="132.0" y="230" text-anchor="middle">0 %</text><line class="grid" x1="219.0" x2="219.0" y1="18" y2="214"/><text x="219.0" y="230" text-anchor="middle">5 %</text><line class="grid" x1="306.0" x2="306.0" y1="18" y2="214"/><text x="306.0" y="230" text-anchor="middle">10 %</text><line class="grid" x1="393.0" x2="393.0" y1="18" y2="214"/><text x="393.0" y="230" text-anchor="middle">15 %</text><line class="grid" x1="480.0" x2="480.0" y1="18" y2="214"/><text x="480.0" y="230" text-anchor="middle">20 %</text><text x="122" y="35" text-anchor="end">Direction Générale</text><rect class="gbar hbar" style="animation-delay:0.00s" x="132" y="26" width="308.0" height="12" rx="4" fill="url(#gr)" opacity="1"><title>Direction Générale : 17,7 %</title></rect><text class="val" x="447.0" y="36">17,7 %</text><text x="122" y="54" text-anchor="end">Opérations</text><rect class="gbar hbar" style="animation-delay:0.06s" x="132" y="45" width="266.2" height="12" rx="4" fill="url(#gr)" opacity="1"><title>Opérations : 15,3 %</title></rect><text class="val" x="405.2" y="55">15,3 %</text><text x="122" y="73" text-anchor="end">Juridique</text><rect class="gbar hbar" style="animation-delay:0.12s" x="132" y="64" width="259.3" height="12" rx="4" fill="url(#gr)" opacity="1"><title>Juridique : 14,9 %</title></rect><text class="val" x="398.3" y="74">14,9 %</text><text x="122" y="92" text-anchor="end">Informatique</text><rect class="gbar hbar" style="animation-delay:0.18s" x="132" y="83" width="252.3" height="12" rx="4" fill="#49a7ff" opacity="0.55"><title>Informatique : 14,5 %</title></rect><text class="val" x="391.3" y="93">14,5 %</text><text x="122" y="111" text-anchor="end">Data & Analytics</text><rect class="gbar hbar" style="animation-delay:0.24s" x="132" y="102" width="240.1" height="12" rx="4" fill="#49a7ff" opacity="0.55"><title>Data & Analytics : 13,8 %</title></rect><text class="val" x="379.1" y="112">13,8 %</text><text x="122" y="130" text-anchor="end">Marketing</text><rect class="gbar hbar" style="animation-delay:0.30s" x="132" y="121" width="231.4" height="12" rx="4" fill="#49a7ff" opacity="0.55"><title>Marketing : 13,3 %</title></rect><text class="val" x="370.4" y="131">13,3 %</text><text x="122" y="149" text-anchor="end">Service Client</text><rect class="gbar hbar" style="animation-delay:0.36s" x="132" y="140" width="205.3" height="12" rx="4" fill="#49a7ff" opacity="0.55"><title>Service Client : 11,8 %</title></rect><text class="val" x="344.3" y="150">11,8 %</text><text x="122" y="168" text-anchor="end">Finance</text><rect class="gbar hbar" style="animation-delay:0.42s" x="132" y="159" width="200.1" height="12" rx="4" fill="#49a7ff" opacity="0.55"><title>Finance : 11,5 %</title></rect><text class="val" x="339.1" y="169">11,5 %</text><text x="122" y="187" text-anchor="end">Ressources Humaines</text><rect class="gbar hbar" style="animation-delay:0.48s" x="132" y="178" width="191.4" height="12" rx="4" fill="#49a7ff" opacity="0.55"><title>Ressources Humaines : 11,0 %</title></rect><text class="val" x="330.4" y="188">11,0 %</text><text x="122" y="206" text-anchor="end">Ventes</text><rect class="gbar hbar" style="animation-delay:0.54s" x="132" y="197" width="175.7" height="12" rx="4" fill="#49a7ff" opacity="0.55"><title>Ventes : 10,1 %</title></rect><text class="val" x="314.7" y="207">10,1 %</text><line x1="363.42" x2="363.42" y1="18" y2="214" stroke="#6ce09f" stroke-width="1.5" stroke-dasharray="4 4"/><text x="367.42" y="15" style="fill:#c8ffdc">Moyenne 13,3 %</text></svg><p class="chart-note">Source : requête SQL Q03 (données fictives).</p></figure><p><strong>Contexte :</strong> analyse de 1 500 employés répartis dans 10 départements pour répondre à 15 questions business du service RH.</p><div class="tag-list"><span>SQL</span><span>SQLite</span><span>Turnover</span><span>Excel · Word · PowerPoint</span></div><div class="project-columns"><div class="project-block"><h4>Travaux réalisés</h4><ul><li>Schéma de 4 tables, index et vues enrichies</li><li>22 requêtes SQL pour 15 questions business</li><li>Tests statistiques et détection d'anomalies</li><li>Classeur Excel, rapport Word et présentation Direction</li></ul></div><div class="project-block"><h4>Insights clés</h4><ul><li>Turnover moyen de 13,3 % sur l'ensemble des départements</li><li>Direction Générale la plus touchée (17,7 %), Ventes la moins touchée (10,1 %)</li><li>Écart de plus de 7 points entre départements</li></ul></div><div class="project-block wide"><h4>Impact business</h4><ul><li>Meilleur pilotage des effectifs</li><li>Identification des départements à risque</li><li>Outils : SQL, Python</li></ul></div></div><!-- TODO : remplacer par le lien exact du dépôt GitHub --><div class="project-actions"><a class="btn btn-primary" href="https://github.com/angenguessan08-cpu" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Voir le projet sur GitHub</a></div></article>
 
-              <div class="project-block">
-                <h4>Objectifs</h4>
-                <ul>
-                  <li>Suivre les revenus locatifs</li>
-                  <li>Analyser le taux d’occupation</li>
-                  <li>Identifier les biens les plus rentables</li>
-                  <li>Optimiser la gestion immobilière</li>
-                </ul>
-              </div>
-
-              <div class="project-block">
-                <h4>Travaux réalisés</h4>
-                <ul>
-                  <li>Création d’un dashboard Power BI interactif</li>
-                  <li>Modélisation des données immobilières</li>
-                  <li>Création de KPI dynamiques avec DAX</li>
-                  <li>Analyse des performances par zone</li>
-                </ul>
-              </div>
-
-              <div class="project-block">
-                <h4>Insights clés</h4>
-                <ul>
-                  <li>Les biens premium génèrent la meilleure marge</li>
-                  <li>Certaines zones présentent un faible taux d’occupation</li>
-                  <li>Les revenus sont fortement concentrés sur quelques actifs</li>
-                  <li>Les coûts de maintenance impactent la rentabilité</li>
-                </ul>
-              </div>
-
-              <div class="project-block">
-                <h4>Impact business</h4>
-                <ul>
-                  <li>Amélioration du pilotage immobilier</li>
-                  <li>Optimisation des investissements</li>
-                  <li>Aide à la prise de décision stratégique</li>
-                  <li>Outils : Power BI, DAX</li>
-                </ul>
-              </div>
-
-            </div>
-
-            <!-- Boutons -->
-            <div class="hero-actions" style="margin-top:24px;">
-
-              <a class="btn btn-primary" href="https://github.com/angenguessan08-cpu/power-bi-projet-immobilier.git "
-                target="_blank">
-                Voir le dashbord sur GitHub
-              </a>
-            </div>
-
-          </article>
-
+<article class="project-card reveal"><div class="project-top"><div><p class="eyebrow">Power BI</p><h3>Analyse Immobilière — Dashboard Exécutif</h3></div><span class="project-number">07</span></div><figure class="chart-box"><figcaption class="chart-title"><span>Aperçu du dashboard exécutif</span><small>Power BI · DAX</small></figcaption><svg class="chart" viewBox="0 0 520 230" role="img" aria-label="Aperçu illustratif du dashboard Power BI" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d99b"/><stop offset="1" stop-color="#49a7ff" stop-opacity=".7"/></linearGradient><linearGradient id="ai" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f07ab0" stop-opacity=".35"/><stop offset="1" stop-color="#f07ab0" stop-opacity="0"/></linearGradient><linearGradient id="bi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#49a7ff" stop-opacity=".3"/><stop offset="1" stop-color="#49a7ff" stop-opacity="0"/></linearGradient></defs><rect x="44" y="20" width="142" height="46" rx="8" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.1)"/><text x="56" y="40">Revenus locatifs</text><rect x="56" y="48" width="60" height="6" rx="3" fill="url(#gi)"/><rect x="198" y="20" width="142" height="46" rx="8" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.1)"/><text x="210" y="40">Taux d'occupation</text><rect x="210" y="48" width="74" height="6" rx="3" fill="url(#gi)"/><rect x="352" y="20" width="142" height="46" rx="8" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.1)"/><text x="364" y="40">Marge par bien</text><rect x="364" y="48" width="88" height="6" rx="3" fill="url(#gi)"/><rect class="gbar" style="animation-delay:0.00s" x="44" y="126" width="22" height="64" rx="4" fill="url(#gi)"/><rect class="gbar" style="animation-delay:0.07s" x="80" y="89" width="22" height="101" rx="4" fill="url(#gi)"/><rect class="gbar" style="animation-delay:0.14s" x="116" y="109" width="22" height="81" rx="4" fill="url(#gi)"/><rect class="gbar" style="animation-delay:0.21s" x="152" y="67" width="22" height="123" rx="4" fill="url(#gi)"/><rect class="gbar" style="animation-delay:0.28s" x="188" y="100" width="22" height="90" rx="4" fill="url(#gi)"/><rect class="gbar" style="animation-delay:0.35s" x="224" y="81" width="22" height="109" rx="4" fill="url(#gi)"/><rect class="gbar" style="animation-delay:0.42s" x="260" y="117" width="22" height="73" rx="4" fill="url(#gi)"/><line class="grid" x1="44" x2="300" y1="190" y2="190"/><circle cx="396" cy="134" r="40" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="16"/><circle class="ring" cx="396" cy="134" r="40" fill="none" stroke="#58e0d5" stroke-width="16" stroke-linecap="round" stroke-dasharray="170 252" transform="rotate(-90 396 134)"/><text x="396" y="190" text-anchor="middle">Répartition par zone</text></svg><p class="chart-note">Aperçu illustratif de la structure du dashboard.</p></figure><p><strong>Contexte :</strong> analyse des performances d'un portefeuille immobilier afin d'optimiser les revenus locatifs, le taux d'occupation et la rentabilité des actifs.</p><div class="tag-list"><span>Power BI</span><span>DAX</span><span>Immobilier</span><span>KPI</span></div><div class="project-columns"><div class="project-block"><h4>Travaux réalisés</h4><ul><li>Dashboard Power BI interactif</li><li>Modélisation des données immobilières</li><li>KPI dynamiques avec DAX</li><li>Analyse des performances par zone</li></ul></div><div class="project-block"><h4>Insights clés</h4><ul><li>Les biens premium génèrent la meilleure marge</li><li>Certaines zones présentent un faible taux d'occupation</li><li>Revenus concentrés sur quelques actifs</li><li>Les coûts de maintenance impactent la rentabilité</li></ul></div><div class="project-block wide"><h4>Impact business</h4><ul><li>Amélioration du pilotage immobilier</li><li>Optimisation des investissements</li><li>Outils : Power BI, DAX</li></ul></div></div><div class="project-actions"><a class="btn btn-primary" href="https://github.com/angenguessan08-cpu/power-bi-projet-immobilier.git" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Voir le dashboard sur GitHub</a></div></article>
         </div>
       </div>
     </section>
